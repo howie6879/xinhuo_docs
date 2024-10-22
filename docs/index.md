@@ -2,14 +2,14 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-title: '首页'
+title: "首页"
 
 hero:
-  name: '薪火团队学习规划'
-  text: 'Fire team learning planning'
+  name: "薪火团队学习规划"
+  text: "Fire team learning planning"
   tagline: 学习规划
   image:
-    src: ./assets/images/logo.png
+    src: "https://img.fre123.com/i/2024/10/22/67178075323f7.png"
     alt: 首页
   actions:
     - theme: brand
