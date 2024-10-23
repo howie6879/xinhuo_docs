@@ -24,17 +24,17 @@ export default defineConfig({
       {
         text: "目录",
         items: [
-          { text: "引言", link: "/front/introduction" },
+          { text: "引言", link: "/web/01.introduction/README" },
           {
             text: "开发准备",
             items: [
               {
                 text: "环境搭建",
-                link: "/front/prepare/environment-setup",
+                link: "/web/prepare/environment-setup",
               },
               {
                 text: "VSCode 使用",
-                link: "/front/prepare/vscode-use",
+                link: "/web/prepare/vscode-use",
               },
             ],
           },
@@ -43,21 +43,21 @@ export default defineConfig({
             items: [
               {
                 text: "入门三件套",
-                link: "/front/start/web-study",
+                link: "/web/start/web-study",
               },
               {
                 text: "实践",
-                link: "/front/start/web-practice",
+                link: "/web/start/web-practice",
               },
             ],
           },
-          { text: "框架学习", link: "/front/frame-study" },
-          { text: "附录", link: "/front/appendix" },
+          { text: "框架学习", link: "/web/frame-study" },
+          { text: "附录", link: "/web/appendix" },
         ],
       },
     ],
     socialLinks: [{ icon: "github", link: "https://github.com/xinhuo-dev" }],
     outlineTitle: "页面导航",
   },
-  titleTemplate: "薪火团队",
+  titleTemplate: "薪火研发团队",
 });
