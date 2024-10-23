@@ -22,7 +22,7 @@ yarn run docs:dev
 
 使用 markdown 语言，也可结合 vue 和 html 来使用
 
-引用图片可使用网络图片，若想使用本地图片，则需将图片放入到 `assets -> images` 文件夹中
+引用图片可使用网络图片，若想使用本地图片，则需将图片放入到 `public -> images` 文件夹中
 
 ## 项目配置
 
@@ -57,7 +57,7 @@ export default defineConfig({
 })
 ```
 
-![头部设置](./assets/images/readme/head.png)
+![头部设置](/images/readme/head.png)
 
 ### 首页配置
 
@@ -67,15 +67,15 @@ export default defineConfig({
 
 在 index.md 文件中的 hero 下修改
 
-![首页logo代码位置](./assets/images/readme/logo-setting.png)
+![首页logo代码位置](/images/readme/logo-setting.png)
 
 效果如下：
-![首页logo效果图](./assets/images/readme/logo-home-example.png)
+![首页logo效果图](/images/readme/logo-home-example.png)
 
 #### 首页左侧文本部分
 
 在 index.md 文件中的 hero 下修改，各字段对应图上的位置
-![首页配置](./assets/images/readme/index-setting.png)
+![首页配置](/images/readme/index-setting.png)
 
 ### 详情页
 
@@ -83,7 +83,7 @@ export default defineConfig({
 
 在`docs -> .vitepress -> config.mts`中的`themeConfig`中修改，对应 [sidebar](https://vitepress.dev/zh/reference/default-theme-config#sidebar) 字段
 
-![详情页侧边栏](./assets/images/readme/detail-sidebar.png)
+![详情页侧边栏](/images/readme/detail-sidebar.png)
 
 ```ts
 export default defineConfig({
@@ -139,3 +139,7 @@ description: 'xxx'
 keywords: 'xxx'
 ---
 ```
+
+**使用统一 title 后缀**
+
+每个页面设置为#xxx，那么 seo-title 就会是 xxx
