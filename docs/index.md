@@ -16,7 +16,7 @@ hero:
       link: /post/01.基础入门/01.开始工程师之路
     - theme: brand
       text: 前端路线
-      link: /post/02.前端学习/01.引言
+      link: /post/02.前端学习/01.引言/01.引言
     - theme: brand
       text: 后端路线
       link: /post/03.后端学习/01.引言
