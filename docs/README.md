@@ -87,6 +87,8 @@ export default defineConfig({
 
 #### 左侧侧边栏目录
 
+> 本项目采用了插件自动生成目录
+
 在`docs -> .vitepress -> config.mts`中的`themeConfig`中修改，对应 [sidebar](https://vitepress.dev/zh/reference/default-theme-config#sidebar) 字段
 
 ![详情页侧边栏](/images/readme/detail-sidebar.png)

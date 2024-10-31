@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
+import { generatePath } from '../../utils/index'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -33,33 +34,9 @@ export default defineConfig({
     plugins: [
       AutoSidebar({
         ignoreList: ['README.md', 'public'],
-        titleFromFile: true,
         deletePrefix: 'post',
         sideBarResolved(data) {
-          if (data['/post/'][0] && data['/post/'][0]?.items) {
-            const resultList = data['/post/'][0]?.items?.reduce(
-              (acc, nowItem) => {
-                const path = `/post/${nowItem.text}/`
-                //去掉序号
-                const itemsList = nowItem?.items.map((item) => {
-                  let newText = item.text
-                  if (item.text.includes('.')) {
-                    const textList = item.text?.split('.')
-                    textList.shift()
-                    newText = textList.join('.')
-                  }
-                  return { ...item, text: newText }
-                })
-                acc[path] = {
-                  ...nowItem,
-                  items: itemsList,
-                }
-                return acc
-              },
-              {}
-            )
-            return resultList
-          } else return data
+          return generatePath(data)
         },
       }),
     ],
