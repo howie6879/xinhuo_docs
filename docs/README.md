@@ -8,6 +8,12 @@
 yarn add -D vitepress
 ```
 
+安装项目所需的所有依赖项
+
+```sh
+yarn install
+```
+
 然后运行项目
 
 ```sh
@@ -81,6 +87,8 @@ export default defineConfig({
 
 #### 左侧侧边栏目录
 
+> 本项目采用了插件自动生成目录
+
 在`docs -> .vitepress -> config.mts`中的`themeConfig`中修改，对应 [sidebar](https://vitepress.dev/zh/reference/default-theme-config#sidebar) 字段
 
 ![详情页侧边栏](/images/readme/detail-sidebar.png)
@@ -140,6 +148,16 @@ keywords: 'xxx'
 ---
 ```
 
+若不想在某一个页面显示 title 的统一后缀，那么加上`titleTemplate: false`即可
+
 **使用统一 title 后缀**
 
-每个页面设置为#xxx，那么 seo-title 就会是 xxx
+若未设置像上面这个，那么若页面设置为`#xxx`，则此页面 seo-title 就会是 `xxx | {titleTemplate}`
+
+直接设置 `titleTemplate:xxx` ， `vitepress` 默认的后缀是`｜xxx`，若不想有竖线这种形式，那么设置成以下这种即可
+
+```ts
+export default defineConfig({
+  titleTemplate: ':title xxxx',
+})
+```
